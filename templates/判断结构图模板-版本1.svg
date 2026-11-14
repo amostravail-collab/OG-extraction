@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <rect x="0" y="0" width="1200" height="760" fill="#F7F6F2"/>
+
+  <g fill="#FFFFFF" stroke="#D9D5CC" stroke-width="2">
+    <rect x="40" y="180" width="250" height="400" rx="12"/>
+    <rect x="330" y="180" width="250" height="400" rx="12"/>
+    <rect x="620" y="180" width="250" height="400" rx="12"/>
+    <rect x="910" y="180" width="250" height="400" rx="12"/>
+  </g>
+
+  <g fill="#8A6A3A" font-size="22" font-weight="600">
+    <text x="64" y="225">情境</text>
+    <text x="354" y="225">判断</text>
+    <text x="644" y="225">原则</text>
+    <text x="934" y="225">适用边界</text>
+  </g>
+
+  <g stroke="#8A6A3A" stroke-width="2">
+    <line x1="64" y1="245" x2="266" y2="245"/>
+    <line x1="354" y1="245" x2="556" y2="245"/>
+    <line x1="644" y1="245" x2="846" y2="245"/>
+    <line x1="934" y1="245" x2="1136" y2="245"/>
+  </g>
+
+  <g fill="#24211C" font-size="21">
+    <text x="64" y="290"><tspan x="64" dy="0">{情境第1行}</tspan><tspan x="64" dy="36">{情境第2行}</tspan><tspan x="64" dy="36">{情境第3行}</tspan><tspan x="64" dy="36">{情境第4行}</tspan></text>
+    <text x="354" y="290"><tspan x="354" dy="0">{判断第1行}</tspan><tspan x="354" dy="36">{判断第2行}</tspan><tspan x="354" dy="36">{判断第3行}</tspan><tspan x="354" dy="36">{判断第4行}</tspan></text>
+    <text x="644" y="290"><tspan x="644" dy="0">{原则第1行}</tspan><tspan x="644" dy="36">{原则第2行}</tspan><tspan x="644" dy="36">{原则第3行}</tspan><tspan x="644" dy="36">{原则第4行}</tspan></text>
+    <text x="934" y="290"><tspan x="934" dy="0">{边界第1行}</tspan><tspan x="934" dy="36">{边界第2行}</tspan><tspan x="934" dy="36">{边界第3行}</tspan><tspan x="934" dy="36">{边界第4行}</tspan></text>
+  </g>
+
+  <g stroke="#8A6A3A" stroke-width="3" fill="#8A6A3A">
+    <line x1="294" y1="380" x2="326" y2="380"/><polygon points="326,373 338,380 326,387"/>
+    <line x1="584" y1="380" x2="616" y2="380"/><polygon points="616,373 628,380 616,387"/>
+    <line x1="874" y1="380" x2="906" y2="380"/><polygon points="906,373 918,380 906,387"/>
+  </g>
+</svg>
