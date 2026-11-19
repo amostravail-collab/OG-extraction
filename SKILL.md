@@ -13,17 +13,32 @@ examples_en:
   - "Turn one thing I describe into a structured experience record"
   - "Sort this transcript by what was actually said"
   - "Give my team a checklist they can follow"
-version: "1.0.0"
+version: "1.0.1"
 author: "阿总"
 ---
 
 # 老炮助手
 
+## 版本检查
+
+每次进入本技能，在路由之前先做一次版本检查。定位本 `SKILL.md` 所在目录，把本文件 frontmatter 里的 `version` 值传进去执行：
+
+```bash
+bash "<本 SKILL.md 所在目录>/scripts/check-update.sh" "<本文件 version 值>" "<本 SKILL.md 所在目录>"
+```
+
+- 命令无输出、报错或超时，直接跳过，不阻塞任何流程，也不向使用者解释检查失败。
+- 命令有输出时，把那一行原样追加在本次回复最末尾，单独成段，前面加引用符 `> `。不在别处重复提醒，同一次回复只提醒一次。
+- 使用者紧接着回复「1」（且上一条回复确实带这行版本提醒），视为明确要求更新：从仓库重新拉取 `SKILL.md`、`references/`、`templates/`、`scripts/` 覆盖写入用户级技能目录 `laopao-assistant/`，共 6 个文件；`README.md`、`LICENSE`、`UPDATE.json` 不写入技能目录；不动 `经验萃取存档/`。装完提示新建一次对话后生效。缺少上一条提醒时，不能把「1」解释成更新。
+- 除了上面这种情况，使用者只问版本、更新内容或要不要更新时，先回答，不执行覆盖写入。
+
+检查脚本会在 `~/.laopao-assistant/` 写更新时间戳做 24 小时缓存；这是工具状态，不是经验素材，不涉及 `经验萃取存档/`。
+
 ## 规则真源
 
 先读 `@references/经验萃取内核-版本9.md`。九字段、三条铁律、归纳引擎、分层准入、出图出清单、结果回填、表达纪律，全部以它为准，本文件不复述。
 
-模板：`@templates/存档模板-版本2.md`、`@templates/判断结构图模板-版本1.svg`、`@templates/执行清单模板-版本1.md`。
+模板：`@templates/存档模板-版本2.md`、`@templates/判断结构图模板-版本1.svg`、`@templates/执行清单模板-版本1.md`。版本检查脚本：`@scripts/check-update.sh`。
 
 存档以云工作区根目录为基准：`经验萃取存档/经验存档/`、`经验萃取存档/出图/`、`经验萃取存档/出清单/`。目录不存在只创建对应那一处。
 

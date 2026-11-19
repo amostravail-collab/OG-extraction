@@ -49,11 +49,17 @@
 
 复制下面一整段，粘贴到自己的 AI 助手对话框发送：
 
-> 从 `https://github.com/amostravail-collab/OG-extraction.git` 安装「老炮助手」技能。在我的用户级技能目录（WorkBuddy 为 `~/.workbuddy/skills/`）下建 `laopao-assistant/`，把仓库根目录的 `SKILL.md`、`references/`、`templates/` 写进去，共 5 个文件；`README.md` 与 `LICENSE` 不要写进技能目录。装完回报写入了几个文件、引用路径是否可读。不要改动我的「经验萃取存档」目录。
+> 从 `https://github.com/amostravail-collab/OG-extraction.git` 安装「老炮助手」技能。在我的用户级技能目录（WorkBuddy 为 `~/.workbuddy/skills/`）下建 `laopao-assistant/`，把仓库根目录的 `SKILL.md`、`references/`、`templates/`、`scripts/` 写进去，共 6 个文件；`README.md`、`LICENSE`、`UPDATE.json` 不要写进技能目录。装完回报写入了几个文件、引用路径是否可读。不要改动我的「经验萃取存档」目录。
 
 安装由助手完成，不用点链接、下载压缩包或敲命令。仓库更新后重发同一段即可覆盖重装，`经验萃取存档/` 不受影响。
 
-`SKILL.md` 是入口，规则真源是 `references/经验萃取内核-版本9.md`，模板在 `templates/`。三处相对引用须保持同一目录层级。
+## 版本与更新
+
+技能会在你每次使用时自动检查有没有新版本。有更新时，助手会在那次回答的末尾提醒你一句；你回复「1」，助手就自动覆盖安装新版，新建一次对话后生效。你的存档不受影响。网络不通或首次检查的 24 小时内不会提醒，属正常，不影响使用。
+
+版本号按改动大小排：改句表述是 `1.0.x`，加入新场景或方法是 `1.x.0`，内核级迭代是 `x.0.0`。每次更新改了什么，记在仓库的 `UPDATE.json`。
+
+`SKILL.md` 是入口，规则真源是 `references/经验萃取内核-版本9.md`，模板在 `templates/`，检查脚本在 `scripts/`。四处相对引用须保持同一目录层级。
 
 ## 目录结构
 
@@ -66,11 +72,14 @@ OG-extraction/
 │   ├── 存档模板-版本2.md
 │   ├── 判断结构图模板-版本1.svg
 │   └── 执行清单模板-版本1.md
+├── scripts/
+│   └── check-update.sh               版本检查脚本
 ├── README.md                         对外介绍与安装指令
-└── LICENSE                          使用许可声明
+├── LICENSE                           使用许可声明
+└── UPDATE.json                       版本清单
 ```
 
-前 5 个文件装入技能目录 `laopao-assistant/`，两个说明文件留在仓库。
+前 6 个文件装入技能目录 `laopao-assistant/`，三份说明文件留在仓库。
 
 ## 许可
 
